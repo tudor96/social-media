@@ -1,0 +1,122 @@
+.background_black {
+	background-color: #2a292e;
+}
+
+.logo {
+	height: 6vh;
+	width: 6vh;
+	object-fit: contain;
+}
+
+.search {
+	border-radius: 3rem;
+	background-color: #434348;
+	color: #c5c4c8;
+	font-size: 2rem;
+	padding: 1rem;
+	padding-left: 4rem;
+}
+
+.search_container {
+	position: relative;
+	margin-left: 2rem;
+}
+
+.search_icon {
+	color: #c5c4c8;
+	font-size: 2rem;
+	position: absolute;
+	top: 1.5rem;
+	left: 1rem;
+}
+
+.search_group {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	height: 100%;
+	width: 100%;
+}
+
+.head_links_group {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+}
+
+.head_icon_link {
+	height: 100%;
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.head_icon_link svg {
+	color: #c5c4c8;
+	height: 3.5rem;
+	width: 3.5rem;
+}
+
+.head_icon_link:hover {
+	border-bottom: 0.5rem solid #4a94f7;
+}
+
+.head_icon_link:hover svg {
+	color: #4a94f7;
+}
+
+.account_group {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.account_logo {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	color: #c5c4c8;
+	font-size: 2rem;
+	cursor: pointer;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+.account_logo:hover {
+	background-color: #434346;
+}
+
+.account_logo img {
+	margin-right: 2rem;
+	border-radius: 3rem;
+	height: 4rem;
+	width: 4rem;
+}
+
+.account_action_group {
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.account_icon {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.account_icon svg {
+	color: #c5c4c8;
+	height: 5rem;
+	width: 5rem;
+	margin: 1rem;
+	padding: 1rem;
+	background-color: #434346;
+	border-radius: 2rem;
+}

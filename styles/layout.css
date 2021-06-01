@@ -1,0 +1,15 @@
+html {
+	font-size: 10px;
+}
+
+.header {
+	height: 8vh;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+.margin-header {
+	margin-top: 8vh;
+}
