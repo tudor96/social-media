@@ -8,8 +8,13 @@ html {
 	width: 100%;
 	top: 0;
 	left: 0;
+	z-index: 1;
 }
 
 .margin-header {
-	margin-top: 8vh;
+	margin-top: 10vh;
+}
+
+body {
+	background-color: #18181c;
 }
