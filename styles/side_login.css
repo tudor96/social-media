@@ -1,0 +1,48 @@
+
+
+body {
+	height: 100vh;
+}
+
+.side_bar {
+    background-color: #18181c;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.form label {
+    color:#18181c;
+    font-size:1.6rem;
+}
+
+.form input {
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.main_content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+}
+
+.button_log {
+    width: 500px;
+    color: #18181c;
+    background-color: #4a94f7;
+    font-size:1.8rem;
+    border:0;
+}
+
+

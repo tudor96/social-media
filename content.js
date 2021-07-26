@@ -1,3 +1,8 @@
+const token = window.localStorage.getItem("token");
+if(!token || token.length <= 0) {
+	window.location.href = "./login.html";
+}
+
 
 fetch("https://jsonplaceholder.typicode.com/posts")
     .then((response) => response.json())
@@ -12,6 +17,7 @@ fetch("https://jsonplaceholder.typicode.com/posts")
     });
 
 async function getUserInformation(userId) {
+	
     const jsonDatas = await fetch("https://jsonplaceholder.typicode.com/users/"+userId);
     const user = await jsonDatas.json();
     console.log(user);
@@ -20,6 +26,12 @@ async function getUserInformation(userId) {
 
 async function inserarePostare(postare) {
     const userInformation = await getUserInformation(postare.userId);
+	// creati inca o functie ca si (getUserInformation), o putem numi (getComments)
+	// const commentariPostare = await getComments(postare.id)
+	// pentru comentarii vom folosii linkul /comments?postId=1
+	// o noua functie apelata aici care ne va da html-ul pentru toate comentariile
+	// ex: const htmlComentarii = getHtmlComentarii(commentariPostare)
+	// functia getHtmlComentarii va aduce un string cu toate comentariile.
     return `
      <div class="card">
 						<div class="card-header">
@@ -51,11 +63,13 @@ async function inserarePostare(postare) {
 							</div>
 
 							<div class="comment-section">
+							
 								<div class="my-comment">
 									<img src="https://picsum.photos/200" alt="My Image" />
 									<input type="text" placeholder="Write your comment..." />
 								</div>
 								<div class="other-comments">
+								// Aici trebuie trecut stringul cu toate comentariile
 									<div class="comment-persona">
 										<img
 											src="https://picsum.photos/200"
@@ -66,6 +80,7 @@ async function inserarePostare(postare) {
 											<p class="small-text">5h ago.</p>
 										</div>
 									</div>
+									
 									<p class="small-text">
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
 										blandit ullamcorper finibus. Donec at risus at nulla viverra
@@ -79,6 +94,11 @@ async function inserarePostare(postare) {
 						</div>
 					</div> 
     `
+}
+
+function logout() {
+	window.localStorage.removeItem("token");
+	window.location.href = "./login.html";
 }
 
 
